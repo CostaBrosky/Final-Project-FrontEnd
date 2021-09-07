@@ -7,7 +7,7 @@
   Epic Energy
 </a>
   <div class="navbar-nav me-auto">
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="isAdmin()">
       <a [routerLink]="['/admin']" routerLinkActive="active" class="nav-link">Admin</a>
     </li>
     <li class="nav-item">
@@ -15,7 +15,7 @@
     </li>
   </div>
 
-  <div class="navbar-nav ms-auto">
+  <div class="navbar-nav ms-auto" *ngIf="!currentUser?.id">
     <li class="nav-item">
       <a [routerLink]="['/register']" routerLinkActive="active" class="nav-link">Sign Up</a>
     </li>
@@ -24,13 +24,14 @@
     </li>
   </div>
 
-  <div class="navbar-nav ms-auto">
+  <div class="navbar-nav ms-auto" *ngIf="currentUser?.id">
     <li class="nav-item">
       <a [routerLink]="['/profile']" routerLinkActive="active" class="nav-link">
+        {{currentUser.username}}
       </a>
     </li>
     <li class="nav-item me-1">
-      <a href="" class="nav-link"
+      <a (click)="logOut()" class="nav-link"
          style="cursor: pointer;">
         Sign Out
       </a>
