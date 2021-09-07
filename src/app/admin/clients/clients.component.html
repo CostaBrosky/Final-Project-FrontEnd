@@ -1,0 +1,171 @@
+<div class="modal fade" id="clientModal" tabIndex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form #f="ngForm" (ngSubmit)="f.form.valid && saveClient()">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Client Details</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="alert alert-danger" *ngIf="errorMessage">
+            <strong>Error!</strong> {{errorMessage}}
+          </div>
+
+<!--          <div class="form-group">-->
+<!--            <label for="businessName">BusinessName</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="businessName"-->
+<!--              name="businessNAme"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.businessName"-->
+<!--              #businessName="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !businessName.valid">-->
+<!--              Business Name is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="vatNumber">Vat Number</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="vatNumber"-->
+<!--              name="vatNumber"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.vatNumber"-->
+<!--              #vatNumber="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !vatNumber.valid">-->
+<!--              Vat Number is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="email">Email</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="email"-->
+<!--              name="email"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.email"-->
+<!--              #email="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !email.valid">-->
+<!--              Email is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="pec">Pec</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="pec"-->
+<!--              name="pec"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.pec"-->
+<!--              #pec="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !pec.valid">-->
+<!--              Pec is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="phone">Phone</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="phone"-->
+<!--              name="phone"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.phone"-->
+<!--              #phone="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !phone.valid">-->
+<!--              Phone is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="contactName">Contact Name</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="contactName"-->
+<!--              name="contactName"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.contactName"-->
+<!--              #contactName="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !contactName.valid">-->
+<!--              Contact Name is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="contactSurname">Contact Surname</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="contactSurname"-->
+<!--              name="contactSurname"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.contactSurname"-->
+<!--              #contactSurname="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !contactSurname.valid">-->
+<!--               Contact Surname is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="contactEmail">Contact Email</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="contactEmail"-->
+<!--              name="contactEmail"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.contactEmail"-->
+<!--              #contactEmail="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !contactEmail.valid">-->
+<!--              Contact Email is required.-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="type">Type</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="type"-->
+<!--              name="type"-->
+<!--              class="form-control"-->
+<!--              [(ngModel)]="client.type"-->
+<!--              #type="ngModel"-->
+<!--              required-->
+<!--            />-->
+<!--            <div class="alert-danger" *ngIf="f.submitted && !type.valid">-->
+<!--              Type is required. Select From PA, SAS, SPA, SR.-->
+<!--            </div>-->
+<!--          </div>-->
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary" type="submit">Save Changes</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

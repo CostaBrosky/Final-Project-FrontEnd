@@ -13,6 +13,7 @@ import { UnauthorizedComponent } from './error/unauthorized/unauthorized.compone
 import {HttpClientModule} from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {FormsModule} from "@angular/forms";
+import { ClientsComponent } from './admin/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import {FormsModule} from "@angular/forms";
     ProfileComponent,
     AdminComponent,
     NotFoundComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    ClientsComponent,
+
   ],
   imports: [
     BrowserModule,
