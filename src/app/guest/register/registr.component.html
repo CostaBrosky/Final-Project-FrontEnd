@@ -1,1 +1,103 @@
-<p>registr works!</p>
+<div class="container mt-4">
+  <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
+    <fa-icon [icon]="faUser" class="ms-auto me-auto user-icon"></fa-icon>
+
+    <form #f="ngForm" (ngSubmit)="f.form.valid && register()">
+
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          #name="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!name.valid && f.submitted">
+          Full name is required.
+        </div>
+      </div>
+
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          [(ngModel)]="user.surname"
+          #surname="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!surname.valid && f.submitted">
+          Surname is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!username.valid && f.submitted">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="password"
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!email.valid && f.submitted">
+          Email is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+          Password is required.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100 mt-3" style="background-color: #50A057;">
+        Sign Up
+      </button>
+
+    </form>
+
+    <a [routerLink]="['/login']" class="btn btn-link" style="color: #EF8354;">
+      I have an account!
+    </a>
+  </div>
+</div>

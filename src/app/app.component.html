@@ -1,2 +1,40 @@
-<h1>Hello World</h1>
+<div class="navbar navbar-expand navbar-dark bg-dark">
+<a href="https://epicode.it/" class="navbar-brand ms-1">
+  <img
+    width="50"
+    alt="Epic Energy"
+    src="https://i.postimg.cc/7ZtFrG8N/E.png">
+  Epic Energy
+</a>
+  <div class="navbar-nav me-auto">
+    <li class="nav-item">
+      <a [routerLink]="['/admin']" routerLinkActive="active" class="nav-link">Admin</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link">Home</a>
+    </li>
+  </div>
+
+  <div class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a [routerLink]="['/register']" routerLinkActive="active" class="nav-link">Sign Up</a>
+    </li>
+    <li class="nav-item me-1">
+      <a [routerLink]="['/login']" routerLinkActive="active" class="nav-link">Sign In</a>
+    </li>
+  </div>
+
+  <div class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a [routerLink]="['/profile']" routerLinkActive="active" class="nav-link">
+      </a>
+    </li>
+    <li class="nav-item me-1">
+      <a href="" class="nav-link"
+         style="cursor: pointer;">
+        Sign Out
+      </a>
+    </li>
+  </div>
+</div>
 <router-outlet></router-outlet>
